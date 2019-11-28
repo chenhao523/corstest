@@ -32,7 +32,7 @@ public class TestController {
         String password = map.get("password");
         String number = map.get("number");
         Map<String, String> resultMap = new HashMap<>();
-        if ("123".equals(number) && "123".equals(password)) {
+        if (password.equals(number)) {
             //将用户名存入到session中
             httpServletRequest.getSession().setAttribute("loginnumber", number);
             httpServletRequest.getSession().setAttribute("username", number);
