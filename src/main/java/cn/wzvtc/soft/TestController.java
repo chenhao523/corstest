@@ -40,5 +40,8 @@ public class TestController {
         }
         return resultMap;
     }
-
+    @RequestMapping(value = "/logout")
+    public void logout(HttpServletRequest httpServletRequest){
+        httpServletRequest.getSession().removeAttribute("loginnumber");
+    }
 }
